@@ -10,7 +10,7 @@ Candidates:
     roberta      question answering (deepset/roberta-base-squad2)
 
 Provenance (please read):
-  This is a CONSOLIDATED, REPRESENTATIVE script. The real training was run in two or
+  This is a CONSOLIDATED, REPRESENTATIVE script. The real training was run in
   three lightweight passes per model, in separate files, because fine-tuning every
   model on every dataset in one go needs far more RAM than a laptop has. The staged
   structure is kept here: each stage loads the previous stage's checkpoint and saves
@@ -96,7 +96,7 @@ def load_text_stages(drugbank_csv, symptoms_csv, max_samples):
         for _, r in drug.iterrows()
     ]
     sym = pd.read_csv(symptoms_csv).dropna()
-    sym_text = [f"{r['Disease']} => {r['symptoms']}" for _, r in sym.iterrows()]
+    sym_text = [f"Disease: {r['Disease']}, Symptoms: {r['symptoms']}" for _, r in sym.iterrows()]
 
     pubmed = cap(load_dataset("pubmed_qa", "pqa_artificial", split="train"), max_samples)
     pubmed_text = [f"Question: {r['question']} Answer: {r['long_answer']}" for r in pubmed]
