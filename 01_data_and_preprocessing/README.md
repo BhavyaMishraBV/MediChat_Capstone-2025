@@ -20,8 +20,8 @@ Thank you to the creators and maintainers of these datasets. I filtered, merged 
 
 | Dataset | Used for | Source |
 |---|---|---|
-| **DrugBank** | Muscle-related drug entries (name, description, indication, mechanism of action) | [drugbank.com](https://www.drugbank.com). Wishart et al., *Nucleic Acids Research*. |
-| **Kaggle Disease-Symptom dataset** | Disease and symptom pairs, used for fine-tuning and for the model comparison test | [Diseases and Symptoms dataset by dhivyeshrk on Kaggle](https://www.kaggle.com/datasets/dhivyeshrk/diseases-and-symptoms-dataset/data) (the page lists no citation). |
+| **DrugBank** | Muscle-related drug entries (name, description, indication, mechanism of action) | [drugbank.com](https://www.drugbank.com). Wishart, D. S., et al. (2018). DrugBank 5.0: a major update to the DrugBank database for 2018. *Nucleic Acids Research*, 46(D1), D1074–D1082. |
+| **Kaggle Disease-Symptom dataset** | Disease and symptom pairs, used for fine-tuning and for the model comparison test | Itachi 9604 (2022). [Disease-Symptom Description Dataset](https://www.kaggle.com/datasets/itachi9604/disease-symptom-description-dataset) [Data set]. Kaggle. |
 | **PubMedQA** (PubMed-derived, `pqa_artificial`) | Yes/no biomedical question answering | Jin et al., *PubMedQA: A Dataset for Biomedical Research Question Answering*, EMNLP 2019. Loaded from the Hugging Face Hub. |
 | **SQuAD** | General question-answering fine-tuning | Rajpurkar et al., *SQuAD: 100,000+ Questions for Machine Comprehension of Text*, 2016. Loaded from the Hugging Face Hub. |
 
@@ -29,7 +29,7 @@ Also thanks to the creators of the base models used in training: `deepset/robert
 
 **Downloaded but not part of the final model:** DailyDialog was tried as general conversation data for DistilGPT-2 and was left out of the final model.
 
-**Consulted as a guide only (not used for training):** datasets on Duchenne muscular dystrophy (DMD), limb-girdle muscular dystrophy (LGMD) and spinal muscular atrophy (SMA), and MIMIC-III. I reviewed them to understand medical terminology and how clinical information is described. None of them was used to train or evaluate a model.
+**Consulted as a guide only (not used for training):** datasets on Duchenne muscular dystrophy (DMD), limb-girdle muscular dystrophy (LGMD) and spinal muscular atrophy (SMA), and MIMIC-III (Johnson, A. E. W., et al. (2016). MIMIC-III, a freely accessible critical care database. *Scientific Data*, 3, 160035). I reviewed them to understand medical terminology and how clinical information is described. None of them was used to train or evaluate a model.
 
 **Not part of the chatbot:** BodyParts2D/Anatomography, MalaCards and DDXPlus were used by the frontend team for the human body model in the wider MediChat project. They were not used in the chatbot process described in this repository. See the team repository for details.
 
